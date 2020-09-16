@@ -26,4 +26,20 @@
     req-flash: used to send flash messages to the view
     nodemon: Installed globally. It is used to watch for changes to files and automatically restart the server.
 
+# Creating the database for the app
+
+Copy the command below and navigate to your phpmyadmin dashboard and execute the following query in the console 
+(usually found at the bottom of the page) in order to create database and table for the app.
+
+CREATE DATABASE socka;
+CREATE TABLE IF NOT EXISTS `players` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `position` varchar(255) NOT NULL,
+  `number` int(11) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `user_name` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
